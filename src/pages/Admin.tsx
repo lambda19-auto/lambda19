@@ -618,7 +618,7 @@ export default function Admin() {
             <div className="glass-panel p-4 text-xs space-y-3">
               <div className="text-slate-500 font-mono uppercase tracking-wider">{language === 'ru' ? 'Версия ПО' : 'Software Version'}</div>
               <div className="font-mono text-white flex items-center justify-between">
-                <span>v1.0.1 (Docker)</span>
+                <span>v1.0.1</span>
                 <span className="text-emerald-500">LIVE</span>
               </div>
               <div className="text-slate-500 font-mono uppercase tracking-wider">{language === 'ru' ? 'База данных' : 'Database Status'}</div>
