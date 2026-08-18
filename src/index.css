@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lambda-orange: #F27D26;
-  --color-lambda-copper: #B45309;
-  --color-lambda-metal: #1A1C1E;
+  /* The existing token name is kept to avoid breaking utility classes. */
+  --color-lambda-orange: #FFC400;
+  --color-lambda-copper: #D88900;
+  --color-lambda-metal: #151922;
+  --color-lambda-void: #07090D;
+  --color-lambda-gold: #FFE34D;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
@@ -13,10 +16,12 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#0F1113] text-slate-200 antialiased;
+    @apply bg-lambda-void text-slate-200 antialiased;
     background-image: 
-      radial-gradient(circle at 50% -20%, rgba(242, 125, 38, 0.15), transparent 60%),
-      linear-gradient(to bottom, #0F1113, #1A1C1E);
+      radial-gradient(circle at 50% -18%, rgba(255, 196, 0, 0.16), transparent 58%),
+      radial-gradient(circle at 50% 110%, rgba(255, 227, 77, 0.08), transparent 38%),
+      linear-gradient(to bottom, #07090D, #151922);
+    background-attachment: fixed;
   }
 }
 
@@ -31,7 +36,7 @@
 }
 
 .circuit-pattern {
-  background-image: radial-gradient(rgba(242, 125, 38, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 196, 0, 0.12) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -40,7 +45,11 @@
 }
 
 .orange-glow {
-  box-shadow: 0 0 20px rgba(242, 125, 38, 0.2);
+  box-shadow: 0 0 26px rgba(255, 196, 0, 0.22);
+}
+
+.gold-logo-glow {
+  filter: drop-shadow(0 0 18px rgba(255, 196, 0, 0.28));
 }
 
 @keyframes pulse-slow {
