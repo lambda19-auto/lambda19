@@ -31,7 +31,7 @@ const ContactsPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0F1113] selection:bg-lambda-orange/30 py-20 px-6">
+    <div className="min-h-screen bg-[#07090D] selection:bg-lambda-orange/30 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-12">
           <Link 
@@ -45,13 +45,13 @@ const ContactsPage = () => {
           <div className="flex items-center gap-2 bg-white/5 rounded-full p-1 border border-white/10">
             <button 
               onClick={() => setLanguage('ru')}
-              className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'ru' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'ru' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
             >
               RU
             </button>
             <button 
               onClick={() => setLanguage('en')}
-              className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'en' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+              className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'en' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
             >
               EN
             </button>
