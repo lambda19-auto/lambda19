@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">lambda19</title>
+  <desc id="desc">Golden angular lambda19 mark on a dark circular background</desc>
+  <defs>
+    <radialGradient id="surface" cx="50%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#171c26" />
+      <stop offset="0.72" stop-color="#0b0e14" />
+      <stop offset="1" stop-color="#050608" />
+    </radialGradient>
+    <linearGradient id="rim" x1="50%" y1="0" x2="50%" y2="100%">
+      <stop offset="0" stop-color="#333947" />
+      <stop offset="0.72" stop-color="#202632" />
+      <stop offset="1" stop-color="#ffe95f" />
+    </linearGradient>
+    <linearGradient id="gold" x1="50%" y1="0" x2="50%" y2="100%">
+      <stop offset="0" stop-color="#ffad00" />
+      <stop offset="0.55" stop-color="#ffc400" />
+      <stop offset="1" stop-color="#ffe33d" />
+    </linearGradient>
+    <radialGradient id="floorGlow" cx="50%" cy="100%" r="58%">
+      <stop offset="0" stop-color="#ffe44d" stop-opacity="0.72" />
+      <stop offset="1" stop-color="#ffc400" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <clipPath id="disc">
+      <circle cx="128" cy="128" r="116" />
+    </clipPath>
+  </defs>
+
+  <circle cx="128" cy="128" r="119" fill="url(#rim)" />
+  <circle cx="128" cy="128" r="116" fill="url(#surface)" />
+  <ellipse cx="128" cy="230" rx="104" ry="55" fill="url(#floorGlow)" clip-path="url(#disc)" />
+
+  <g fill="url(#gold)" filter="url(#glow)">
+    <path d="M43 72 58 82h140l15-10-52 5H95z" />
+    <path d="M72 92 128 124l56-32-56 69z" />
+    <path d="m66 96 62 100-14-52z" />
+    <path d="m190 96-62 100 14-52z" />
+  </g>
+</svg>
