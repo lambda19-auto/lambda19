@@ -109,7 +109,7 @@ export default function ChatWidget() {
             <div className="p-4 border-b border-white/10 flex items-center justify-between bg-lambda-orange/10">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-lambda-orange flex items-center justify-center">
-                  <Bot size={18} className="text-white" />
+                  <Bot size={18} className="text-[#090B0F]" />
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-white">{t.chat.title}</h3>
@@ -203,7 +203,7 @@ export default function ChatWidget() {
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
           "w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 orange-glow",
-          isOpen ? "bg-slate-800 text-white" : "bg-lambda-orange text-white"
+          isOpen ? "bg-slate-800 text-white" : "bg-lambda-orange text-[#090B0F]"
         )}
       >
         {isOpen ? <X size={24} /> : <MessageSquare size={24} />}

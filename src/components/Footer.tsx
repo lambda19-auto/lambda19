@@ -5,13 +5,11 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-white/5 py-20 px-6 bg-[#0F1113]">
+    <footer className="border-t border-white/5 py-20 px-6 bg-[#07090D]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
         <div className="col-span-2">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-8 bg-lambda-orange rounded flex items-center justify-center font-bold text-white">
-              λ
-            </div>
+            <img src="/lambda19-mark.svg" alt="" className="w-8 h-8 gold-logo-glow" />
             <span className="text-xl font-bold tracking-tighter text-white">lambda19</span>
           </div>
           <p className="text-slate-500 text-sm max-w-sm leading-relaxed">

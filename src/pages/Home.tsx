@@ -62,12 +62,10 @@ export default function Home() {
   return (
     <div id="home" className="min-h-screen selection:bg-lambda-orange/30">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-40 border-b border-white/5 bg-[#0F1113]/80 backdrop-blur-xl">
+      <nav className="fixed top-0 w-full z-40 border-b border-white/5 bg-[#07090D]/85 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-lambda-orange rounded flex items-center justify-center font-bold text-white text-xl">
-              λ
-            </div>
+            <img src="/lambda19-mark.svg" alt="" className="w-10 h-10 gold-logo-glow" />
             <span className="text-xl font-bold tracking-tighter text-white">lambda19</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
@@ -79,13 +77,13 @@ export default function Home() {
             <div className="flex items-center gap-2 bg-white/5 rounded-full p-1 border border-white/10">
               <button 
                 onClick={() => setLanguage('ru')}
-                className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'ru' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'ru' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
               >
                 RU
               </button>
               <button 
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'en' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'en' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
               >
                 EN
               </button>
@@ -111,7 +109,7 @@ export default function Home() {
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] tracking-tighter mb-8">
                 {t.hero.title1} <br className="hidden sm:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lambda-orange to-orange-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lambda-orange to-lambda-gold">
                   {t.hero.title2}
                 </span>
               </h1>
@@ -121,7 +119,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <a 
                   href="#contact"
-                  className="bg-lambda-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 transition-all orange-glow"
+                  className="bg-lambda-orange hover:bg-lambda-gold text-[#090B0F] px-8 py-4 rounded-xl font-semibold flex items-center gap-2 transition-all orange-glow"
                 >
                   {t.hero.ctaPrimary} <ArrowRight size={20} />
                 </a>
@@ -142,29 +140,13 @@ export default function Home() {
             >
               <div className="relative z-10 glass-panel p-4 brushed-metal orange-glow">
                 <div className="rounded-xl overflow-hidden border border-white/10 bg-black/40 p-8 flex flex-col items-center justify-center min-h-[400px]">
-                  <div className="relative w-48 h-48 flex items-center justify-center">
+                  <div className="relative w-56 h-56 flex items-center justify-center">
                     <div className="absolute inset-0 bg-lambda-orange/20 blur-[80px] rounded-full animate-pulse-slow" />
-                    <svg viewBox="0 0 100 100" className="w-40 h-40 relative z-10 drop-shadow-[0_0_15px_rgba(242,125,38,0.5)]">
-                      <defs>
-                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#F27D26" />
-                          <stop offset="100%" stopColor="#78350F" />
-                        </linearGradient>
-                      </defs>
-                      <path 
-                        d="M20,80 L40,20 L60,20 L80,80 L65,80 L50,35 L35,80 Z" 
-                        fill="url(#logoGrad)"
-                        stroke="rgba(255,255,255,0.1)"
-                        strokeWidth="0.5"
-                      />
-                      <path 
-                        d="M30,85 L70,85" 
-                        stroke="url(#logoGrad)" 
-                        strokeWidth="2" 
-                        strokeLinecap="round"
-                        opacity="0.5"
-                      />
-                    </svg>
+                    <img
+                      src="/lambda19-mark.svg"
+                      alt="lambda19"
+                      className="w-52 h-52 relative z-10 gold-logo-glow"
+                    />
                     <div className="absolute inset-0 opacity-20">
                       <div className="absolute top-1/4 left-0 w-12 h-[1px] bg-lambda-orange" />
                       <div className="absolute top-1/2 right-0 w-16 h-[1px] bg-lambda-orange" />
@@ -287,16 +269,16 @@ export default function Home() {
                     <svg className="absolute inset-0 w-full h-full z-0 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
                       <defs>
                         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#ff6600" stopOpacity="0.9" />
-                          <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.9" />
+                          <stop offset="0%" stopColor="#ffad00" stopOpacity="0.9" />
+                          <stop offset="100%" stopColor="#ffc400" stopOpacity="0.9" />
                         </linearGradient>
                         <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.9" />
-                          <stop offset="100%" stopColor="#10b981" stopOpacity="0.9" />
+                          <stop offset="0%" stopColor="#ffc400" stopOpacity="0.9" />
+                          <stop offset="100%" stopColor="#ffe34d" stopOpacity="0.9" />
                         </linearGradient>
                         <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="0%">
-                          <stop offset="0%" stopColor="#10b981" stopOpacity="0.9" />
-                          <stop offset="100%" stopColor="#a855f7" stopOpacity="0.9" />
+                          <stop offset="0%" stopColor="#ffe34d" stopOpacity="0.9" />
+                          <stop offset="100%" stopColor="#d88900" stopOpacity="0.9" />
                         </linearGradient>
                       </defs>
                       {/* Path 01 -> 02 (glow + sharp line) */}
@@ -314,10 +296,10 @@ export default function Home() {
 
                     {/* Step 1: Left Top */}
                     <div className="flex flex-col items-center relative z-10 group">
-                       <div className="w-20 h-20 rounded-2xl bg-black border border-lambda-orange/40 flex items-center justify-center text-lambda-orange shadow-[0_0_25px_rgba(255,102,0,0.15)] group-hover:shadow-[0_0_35px_rgba(255,102,0,0.4)] group-hover:border-lambda-orange/60 transition-all duration-300 relative">
+                       <div className="w-20 h-20 rounded-2xl bg-black border border-lambda-orange/40 flex items-center justify-center text-lambda-orange shadow-[0_0_25px_rgba(255,196,0,0.15)] group-hover:shadow-[0_0_35px_rgba(255,196,0,0.4)] group-hover:border-lambda-orange/60 transition-all duration-300 relative">
                          <Search size={36} />
                          {/* Number tag as caption */}
-                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-lambda-orange/40 text-lambda-orange text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(255,102,0,0.2)]">
+                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-lambda-orange/40 text-lambda-orange text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(255,196,0,0.2)]">
                            {t.process.steps[0].number}
                          </div>
                        </div>
@@ -325,10 +307,10 @@ export default function Home() {
                     
                     {/* Step 2: Right Top */}
                     <div className="flex flex-col items-center relative z-10 group">
-                       <div className="w-20 h-20 rounded-2xl bg-black border border-blue-500/40 flex items-center justify-center text-blue-400 shadow-[0_0_25px_rgba(59,130,246,0.15)] group-hover:shadow-[0_0_35px_rgba(59,130,246,0.4)] group-hover:border-blue-500/60 transition-all duration-300 relative">
+                       <div className="w-20 h-20 rounded-2xl bg-black border border-lambda-orange/40 flex items-center justify-center text-lambda-gold shadow-[0_0_25px_rgba(255,196,0,0.15)] group-hover:shadow-[0_0_35px_rgba(255,196,0,0.4)] group-hover:border-lambda-orange/60 transition-all duration-300 relative">
                          <BrainCircuit size={36} />
                          {/* Number tag as caption */}
-                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-blue-500/40 text-blue-400 text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(59,130,246,0.2)]">
+                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-lambda-orange/40 text-lambda-gold text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(255,196,0,0.2)]">
                            {t.process.steps[1].number}
                          </div>
                        </div>
@@ -336,10 +318,10 @@ export default function Home() {
 
                     {/* Step 4: Left Bottom */}
                     <div className="flex flex-col items-center relative z-10 group">
-                       <div className="w-20 h-20 rounded-2xl bg-black border border-purple-500/40 flex items-center justify-center text-purple-400 shadow-[0_0_25px_rgba(168,85,247,0.15)] group-hover:shadow-[0_0_35px_rgba(168,85,247,0.4)] group-hover:border-purple-500/60 transition-all duration-300 relative">
+                       <div className="w-20 h-20 rounded-2xl bg-black border border-lambda-orange/40 flex items-center justify-center text-lambda-orange shadow-[0_0_25px_rgba(255,196,0,0.15)] group-hover:shadow-[0_0_35px_rgba(255,196,0,0.4)] group-hover:border-lambda-orange/60 transition-all duration-300 relative">
                          <RefreshCcw size={36} />
                          {/* Number tag as caption */}
-                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-purple-500/40 text-purple-400 text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(168,85,247,0.2)]">
+                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-lambda-orange/40 text-lambda-orange text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(255,196,0,0.2)]">
                            {t.process.steps[3].number}
                          </div>
                        </div>
@@ -347,10 +329,10 @@ export default function Home() {
 
                     {/* Step 3: Right Bottom */}
                     <div className="flex flex-col items-center relative z-10 group">
-                       <div className="w-20 h-20 rounded-2xl bg-black border border-emerald-500/40 flex items-center justify-center text-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_35px_rgba(16,185,129,0.4)] group-hover:border-emerald-500/60 transition-all duration-300 relative">
+                       <div className="w-20 h-20 rounded-2xl bg-black border border-lambda-orange/40 flex items-center justify-center text-lambda-gold shadow-[0_0_25px_rgba(255,196,0,0.15)] group-hover:shadow-[0_0_35px_rgba(255,196,0,0.4)] group-hover:border-lambda-orange/60 transition-all duration-300 relative">
                          <Blocks size={36} />
                          {/* Number tag as caption */}
-                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-emerald-500/40 text-emerald-400 text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(16,185,129,0.2)]">
+                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border border-lambda-orange/40 text-lambda-gold text-xs font-mono px-3 py-0.5 rounded-full tracking-wider shadow-[0_2px_10px_rgba(255,196,0,0.2)]">
                            {t.process.steps[2].number}
                          </div>
                        </div>
@@ -432,7 +414,7 @@ export default function Home() {
                         className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F1113] to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#07090D] to-transparent opacity-60" />
                       <div className="absolute bottom-4 left-4">
                         <span className="text-[10px] font-mono text-lambda-orange bg-black/50 px-2 py-1 rounded border border-lambda-orange/30 uppercase tracking-widest">
                           {project.category}
