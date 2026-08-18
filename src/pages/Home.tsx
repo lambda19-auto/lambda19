@@ -381,7 +381,7 @@ export default function Home() {
                   title: t.demos.projects[0].title,
                   description: t.demos.projects[0].description,
                   category: "Travel & Lifestyle",
-                  image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800", 
+                  image: "/travelai.webp",
                   href: "https://travelai.top/",
                   tags: ["AI Recommendations", "Real-time Insights"]
                 },
@@ -389,7 +389,7 @@ export default function Home() {
                   title: t.demos.projects[1].title,
                   description: t.demos.projects[1].description,
                   category: "AI Assistant",
-                  image: "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&q=80&w=800",
+                  image: "/atomy.webp",
                   href: "https://t.me/AI_consult_Atomy_bot",
                   tags: ["Telegram Bot", "Knowledge Base"]
                 },
@@ -397,7 +397,7 @@ export default function Home() {
                   title: t.demos.projects[2].title,
                   description: t.demos.projects[2].description,
                   category: "Fintech & Video AI",
-                  image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800",
+                  image: "/choa.webp",
                   href: "https://t.me/Choa_fintech_bot",
                   tags: ["Fintech", "Video Avatars"]
                 },
