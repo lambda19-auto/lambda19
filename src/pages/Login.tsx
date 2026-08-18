@@ -81,7 +81,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F1113] text-white selection:bg-lambda-orange/30 flex flex-col justify-between py-12 px-6 relative overflow-hidden">
+    <div className="min-h-screen bg-[#07090D] text-white selection:bg-lambda-orange/30 flex flex-col justify-between py-12 px-6 relative overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-lambda-orange/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -98,13 +98,13 @@ export default function Login() {
         <div className="flex items-center gap-2 bg-white/5 rounded-full p-1 border border-white/10">
           <button 
             onClick={() => setLanguage('ru')}
-            className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'ru' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+            className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'ru' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
           >
             RU
           </button>
           <button 
             onClick={() => setLanguage('en')}
-            className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'en' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+            className={`px-3 py-1 rounded-full text-xs transition-all ${language === 'en' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
           >
             EN
           </button>
@@ -190,7 +190,7 @@ export default function Login() {
               id="submit_login"
               type="submit"
               disabled={loading}
-              className="w-full bg-lambda-orange hover:brightness-110 text-white font-semibold py-3.5 px-4 rounded-xl shadow-lg shadow-lambda-orange/20 transition-all duration-300 flex justify-center items-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
+              className="w-full bg-lambda-orange hover:brightness-110 text-[#090B0F] font-semibold py-3.5 px-4 rounded-xl shadow-lg shadow-lambda-orange/20 transition-all duration-300 flex justify-center items-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
             >
               {loading ? loginText.loading : loginText.submit}
             </button>
