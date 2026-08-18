@@ -303,7 +303,7 @@ export default function Admin() {
 
   if (isAuthenticated === null) {
     return (
-      <div className="min-h-screen bg-[#0F1113] flex flex-col items-center justify-center text-white">
+      <div className="min-h-screen bg-[#07090D] flex flex-col items-center justify-center text-white">
         <div className="w-12 h-12 border-4 border-lambda-orange/30 border-t-lambda-orange rounded-full animate-spin mb-4" />
         <p className="text-sm font-mono tracking-widest text-slate-400 uppercase">
           {language === 'ru' ? 'Проверка авторизации...' : 'Verifying authorization...'}
@@ -313,18 +313,16 @@ export default function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F1113] text-slate-200">
+    <div className="min-h-screen bg-[#07090D] text-slate-200">
       {/* Admin Navbar */}
-      <nav className="border-b border-white/5 bg-[#0F1113]/95 backdrop-blur-xl sticky top-0 z-50">
+      <nav className="border-b border-white/5 bg-[#07090D]/95 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link to="/" className="w-10 h-10 bg-lambda-orange/10 border border-lambda-orange/20 rounded flex items-center justify-center text-lambda-orange hover:bg-lambda-orange hover:text-white transition-colors">
+            <Link to="/" className="w-10 h-10 bg-lambda-orange/10 border border-lambda-orange/20 rounded flex items-center justify-center text-lambda-orange hover:bg-lambda-orange hover:text-[#090B0F] transition-colors">
               <ArrowLeft size={18} />
             </Link>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-lambda-orange rounded flex items-center justify-center font-bold text-white text-xl">
-                λ
-              </div>
+              <img src="/lambda19-mark.svg" alt="" className="w-10 h-10 gold-logo-glow" />
               <div>
                 <span className="text-xl font-bold tracking-tighter text-white block">lambda19</span>
                 <span className="text-[10px] font-mono text-lambda-orange tracking-widest uppercase block -mt-1">Admin Command Center</span>
@@ -337,13 +335,13 @@ export default function Admin() {
             <div className="flex items-center gap-2 bg-white/5 rounded-full p-1 border border-white/10 text-xs">
               <button 
                 onClick={() => setLanguage('ru')}
-                className={`px-3 py-1 rounded-full transition-all ${language === 'ru' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1 rounded-full transition-all ${language === 'ru' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
               >
                 RU
               </button>
               <button 
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 rounded-full transition-all ${language === 'en' ? 'bg-lambda-orange text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1 rounded-full transition-all ${language === 'en' ? 'bg-lambda-orange text-[#090B0F]' : 'text-slate-400 hover:text-white'}`}
               >
                 EN
               </button>
@@ -360,7 +358,7 @@ export default function Admin() {
         <aside className="space-y-2">
           <button 
             onClick={() => setActiveTab('overview')}
-            className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${activeTab === 'overview' ? 'bg-lambda-orange text-white orange-glow' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`}
+            className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${activeTab === 'overview' ? 'bg-lambda-orange text-[#090B0F] orange-glow' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`}
           >
             <LayoutDashboard size={18} />
             {language === 'ru' ? 'Панель управления' : 'Dashboard Overview'}
@@ -375,7 +373,7 @@ export default function Admin() {
                 setEditingNotes(leads[0].notes || '');
               }
             }}
-            className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${activeTab === 'leads' ? 'bg-lambda-orange text-white orange-glow' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`}
+            className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${activeTab === 'leads' ? 'bg-lambda-orange text-[#090B0F] orange-glow' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`}
           >
             <div className="flex items-center gap-3">
               <Inbox size={18} />
@@ -390,7 +388,7 @@ export default function Admin() {
           
           <button
             onClick={() => setActiveTab('logs')}
-            className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${activeTab === 'logs' ? 'bg-lambda-orange text-white orange-glow' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`}
+            className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-medium transition-all ${activeTab === 'logs' ? 'bg-lambda-orange text-[#090B0F] orange-glow' : 'hover:bg-white/5 text-slate-400 hover:text-white'}`}
           >
             <Database size={18} />
             {language === 'ru' ? 'Управление логами' : 'Log Management'}
@@ -515,7 +513,7 @@ export default function Admin() {
                 
                 <button 
                   onClick={() => setShowAddLead(!showAddLead)}
-                  className="bg-lambda-orange hover:bg-orange-600 text-white px-4 py-2.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg"
+                  className="bg-lambda-orange hover:bg-lambda-gold text-[#090B0F] px-4 py-2.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg"
                 >
                   <Plus size={16} />
                   {language === 'ru' ? 'Добавить заявку' : 'Add Lead'}
@@ -571,7 +569,7 @@ export default function Admin() {
                         className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-lambda-orange resize-none"
                       />
                     </div>
-                    <button className="bg-lambda-orange hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm cursor-pointer">
+                    <button className="bg-lambda-orange hover:bg-lambda-gold text-[#090B0F] px-5 py-2.5 rounded-xl font-semibold text-sm cursor-pointer">
                       {language === 'ru' ? 'Сохранить заявку' : 'Save Lead'}
                     </button>
                   </form>
@@ -833,7 +831,7 @@ export default function Admin() {
                   <button
                     onClick={() => void handleExportLogs()}
                     disabled={logsLoading}
-                    className="px-4 py-3 rounded-xl bg-lambda-orange hover:brightness-110 text-white transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                    className="px-4 py-3 rounded-xl bg-lambda-orange hover:brightness-110 text-[#090B0F] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                   >
                     <FileDown size={17} />
                     {language === 'ru' ? 'Выгрузить CSV' : 'Export CSV'}
