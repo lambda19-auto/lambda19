@@ -96,14 +96,15 @@ export default function ChatWidget() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <AnimatePresence>
-        {isOpen && (
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+      <AnimatePresence mode="wait" initial={false}>
+        {isOpen ? (
           <motion.div
+            key="chat-window"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="mb-4 w-80 sm:w-96 glass-panel overflow-hidden flex flex-col h-[500px] shadow-2xl border-lambda-orange/20"
+            className="w-80 sm:w-96 glass-panel overflow-hidden flex flex-col h-[500px] shadow-2xl border-lambda-orange/20"
           >
             {/* Header */}
             <div className="p-4 border-b border-white/10 flex items-center justify-between bg-lambda-orange/10">
@@ -194,20 +195,18 @@ export default function ChatWidget() {
               </div>
             </div>
           </motion.div>
+        ) : (
+          <motion.button
+            key="chat-launcher"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(true)}
+            className="w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 orange-glow bg-lambda-orange text-[#090B0F]"
+          >
+            <MessageSquare size={24} />
+          </motion.button>
         )}
       </AnimatePresence>
-
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className={cn(
-          "w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 orange-glow",
-          isOpen ? "bg-slate-800 text-white" : "bg-lambda-orange text-[#090B0F]"
-        )}
-      >
-        {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
-      </motion.button>
     </div>
   );
 }
