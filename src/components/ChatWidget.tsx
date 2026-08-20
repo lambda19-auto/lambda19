@@ -97,9 +97,10 @@ export default function ChatWidget() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-      <AnimatePresence>
-        {isOpen && (
+      <AnimatePresence mode="wait" initial={false}>
+        {isOpen ? (
           <motion.div
+            key="chat-window"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -194,19 +195,18 @@ export default function ChatWidget() {
               </div>
             </div>
           </motion.div>
+        ) : (
+          <motion.button
+            key="chat-launcher"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(true)}
+            className="w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 orange-glow bg-lambda-orange text-[#090B0F]"
+          >
+            <MessageSquare size={24} />
+          </motion.button>
         )}
       </AnimatePresence>
-
-      {!isOpen && (
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsOpen(true)}
-          className="w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 orange-glow bg-lambda-orange text-[#090B0F]"
-        >
-          <MessageSquare size={24} />
-        </motion.button>
-      )}
     </div>
   );
 }
