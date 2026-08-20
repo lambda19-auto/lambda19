@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { MessageSquare, X, Send, User, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import ReactMarkdown from 'react-markdown';
 import { clsx, type ClassValue } from 'clsx';
@@ -109,8 +109,12 @@ export default function ChatWidget() {
             {/* Header */}
             <div className="p-4 border-b border-white/10 flex items-center justify-between bg-lambda-orange/10">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-lambda-orange flex items-center justify-center">
-                  <Bot size={18} className="text-[#090B0F]" />
+                <div className="w-8 h-8 rounded-full overflow-hidden border border-lambda-orange/40">
+                  <img
+                    src="/shuhua-avatar.webp"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-white">{t.chat.title}</h3>
@@ -142,7 +146,15 @@ export default function ChatWidget() {
                     "w-8 h-8 rounded-full flex items-center justify-center shrink-0",
                     msg.role === 'user' ? "bg-slate-700" : "bg-lambda-orange/20 border border-lambda-orange/30"
                   )}>
-                    {msg.role === 'user' ? <User size={14} /> : <Bot size={14} className="text-lambda-orange" />}
+                    {msg.role === 'user' ? (
+                      <User size={14} />
+                    ) : (
+                      <img
+                        src="/shuhua-avatar.webp"
+                        alt=""
+                        className="w-full h-full rounded-full object-cover"
+                      />
+                    )}
                   </div>
                   <div className={cn(
                     "max-w-[80%] p-3 rounded-2xl text-sm",
