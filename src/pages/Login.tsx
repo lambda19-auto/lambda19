@@ -81,7 +81,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07090D] text-white selection:bg-lambda-orange/30 flex flex-col justify-between py-12 px-6 relative overflow-hidden">
+    <div className="min-h-screen page-shell text-white selection:bg-lambda-orange/30 flex flex-col justify-between py-12 px-6 relative overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-lambda-orange/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -190,7 +190,7 @@ export default function Login() {
               id="submit_login"
               type="submit"
               disabled={loading}
-              className="w-full bg-lambda-orange hover:brightness-110 text-[#090B0F] font-semibold py-3.5 px-4 rounded-xl shadow-lg shadow-lambda-orange/20 transition-all duration-300 flex justify-center items-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
+              className="w-full molten-button font-semibold py-3.5 px-4 rounded-xl transition-all duration-300 flex justify-center items-center gap-2 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none"
             >
               {loading ? loginText.loading : loginText.submit}
             </button>

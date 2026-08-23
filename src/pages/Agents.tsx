@@ -43,7 +43,7 @@ const AgentsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#07090D] selection:bg-lambda-orange/30 py-20 px-6">
+    <div className="min-h-screen page-shell selection:bg-lambda-orange/30 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-12">
           <Link 

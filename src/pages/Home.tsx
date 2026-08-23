@@ -60,13 +60,13 @@ export default function Home() {
   };
 
   return (
-    <div id="home" className="min-h-screen selection:bg-lambda-orange/30">
+    <div id="home" className="min-h-screen page-shell selection:bg-lambda-orange/30">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-40 border-b border-white/5 bg-[#07090D]/85 backdrop-blur-xl">
+      <nav className="site-nav fixed top-0 w-full z-40 border-b backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/lambda19-mark.svg" alt="" className="w-10 h-10 gold-logo-glow" />
-            <span className="text-xl font-bold tracking-tighter text-white">lambda19</span>
+            <img src="/lambda19-mark.svg" alt="" className="w-11 h-11 object-contain gold-logo-glow" />
+            <span className="text-xl font-bold tracking-tight text-white">lambda<span className="text-lambda-orange">19</span></span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
             <a href="#home" className="hover:text-lambda-orange transition-colors">{t.nav.about}</a>
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] tracking-tighter mb-8">
                 {t.hero.title1} <br className="hidden sm:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-lambda-orange to-lambda-gold">
+                <span className="gold-text">
                   {t.hero.title2}
                 </span>
               </h1>
@@ -119,7 +119,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <a 
                   href="#contact"
-                  className="bg-lambda-orange hover:bg-lambda-gold text-[#090B0F] px-8 py-4 rounded-xl font-semibold flex items-center gap-2 transition-all orange-glow"
+                  className="molten-button px-8 py-4 rounded-xl font-semibold flex items-center gap-2 transition-all"
                 >
                   {t.hero.ctaPrimary} <ArrowRight size={20} />
                 </a>
@@ -139,13 +139,13 @@ export default function Home() {
               className="relative"
             >
               <div className="relative z-10 glass-panel p-4 brushed-metal orange-glow">
-                <div className="rounded-xl overflow-hidden border border-white/10 bg-black/40 p-8 flex flex-col items-center justify-center min-h-[400px]">
+                <div className="hero-emblem-frame rounded-xl overflow-hidden border border-lambda-orange/15 p-8 flex flex-col items-center justify-center min-h-[400px]">
                   <div className="relative w-56 h-56 flex items-center justify-center">
                     <div className="absolute inset-0 bg-lambda-orange/20 blur-[80px] rounded-full animate-pulse-slow" />
                     <img
                       src="/lambda19-mark.svg"
                       alt="lambda19"
-                      className="w-52 h-52 relative z-10 gold-logo-glow"
+                      className="w-56 h-56 object-contain relative z-10 gold-logo-glow"
                     />
                     <div className="absolute inset-0 opacity-20">
                       <div className="absolute top-1/4 left-0 w-12 h-[1px] bg-lambda-orange" />
@@ -154,7 +154,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mt-8 text-center">
-                    <div className="text-2xl font-bold tracking-[0.2em] text-white uppercase">lambda19</div>
+                    <div className="text-2xl font-bold tracking-[0.2em] text-white uppercase">lambda<span className="text-lambda-orange">19</span></div>
                     <div className="text-[10px] font-mono text-lambda-orange uppercase tracking-[0.5em] mt-2">Neural Automation Systems</div>
                   </div>
                 </div>
@@ -166,7 +166,8 @@ export default function Home() {
         </section>
 
         {/* Benefits Bar */}
-        <section className="border-y border-white/5 bg-white/[0.02]">
+        <section className="border-y border-lambda-orange/10 bg-[#0b0805]/70 backdrop-blur-sm">
+          <div className="gold-rule" />
           <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { label: t.stats.work, value: "24/7" },
@@ -180,6 +181,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="gold-rule" />
         </section>
 
         {/* Plus Section */}

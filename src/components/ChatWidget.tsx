@@ -213,7 +213,7 @@ export default function ChatWidget() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(true)}
-            className="w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 orange-glow bg-lambda-orange text-[#090B0F]"
+            className="w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 molten-button"
           >
             <MessageSquare size={24} />
           </motion.button>
