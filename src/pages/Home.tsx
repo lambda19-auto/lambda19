@@ -145,7 +145,7 @@ export default function Home() {
                     <img
                       src="/lambda19-mark.svg"
                       alt="lambda19"
-                      className="w-56 h-56 object-contain relative z-10 gold-logo-glow animate-emblem-float"
+                      className="w-56 h-56 object-contain relative z-10 gold-logo-glow"
                     />
                     <div className="absolute inset-0 opacity-20">
                       <div className="absolute top-1/4 left-0 w-12 h-[1px] bg-lambda-orange" />

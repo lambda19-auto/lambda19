@@ -146,21 +146,26 @@
   50% { opacity: 0.58; transform: scale(1.06); }
 }
 
-@keyframes emblem-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
-
 .animate-pulse-slow {
   animation: pulse-slow 4.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.animate-emblem-float {
-  animation: emblem-float 6s ease-in-out infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .animate-pulse-slow,
-  .animate-emblem-float { animation: none; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .animate-pulse-slow {
+    animation: none !important;
+  }
 }
