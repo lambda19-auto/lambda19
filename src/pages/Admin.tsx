@@ -303,7 +303,7 @@ export default function Admin() {
 
   if (isAuthenticated === null) {
     return (
-      <div className="min-h-screen bg-[#07090D] flex flex-col items-center justify-center text-white">
+      <div className="min-h-screen page-shell flex flex-col items-center justify-center text-white">
         <div className="w-12 h-12 border-4 border-lambda-orange/30 border-t-lambda-orange rounded-full animate-spin mb-4" />
         <p className="text-sm font-mono tracking-widest text-slate-400 uppercase">
           {language === 'ru' ? 'Проверка авторизации...' : 'Verifying authorization...'}
@@ -313,16 +313,16 @@ export default function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-[#07090D] text-slate-200">
+    <div className="min-h-screen page-shell text-slate-200">
       {/* Admin Navbar */}
-      <nav className="border-b border-white/5 bg-[#07090D]/95 backdrop-blur-xl sticky top-0 z-50">
+      <nav className="site-nav border-b backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link to="/" className="w-10 h-10 bg-lambda-orange/10 border border-lambda-orange/20 rounded flex items-center justify-center text-lambda-orange hover:bg-lambda-orange hover:text-[#090B0F] transition-colors">
               <ArrowLeft size={18} />
             </Link>
             <div className="flex items-center gap-3">
-              <img src="/lambda19-mark.svg" alt="" className="w-10 h-10 gold-logo-glow" />
+              <img src="/lambda19-mark.svg" alt="" className="w-10 h-10 object-contain gold-logo-glow" />
               <div>
                 <span className="text-xl font-bold tracking-tighter text-white block">lambda19</span>
                 <span className="text-[10px] font-mono text-lambda-orange tracking-widest uppercase block -mt-1">Admin Command Center</span>

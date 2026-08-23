@@ -98,7 +98,7 @@ const ContactForm = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               disabled={submitting}
-              className="flex-1 bg-lambda-orange hover:bg-lambda-gold disabled:opacity-60 disabled:cursor-not-allowed text-[#090B0F] py-4 rounded-xl font-bold text-lg transition-all orange-glow cursor-pointer"
+              className="flex-1 molten-button disabled:opacity-60 disabled:cursor-not-allowed py-4 rounded-xl font-bold text-lg transition-all cursor-pointer"
             >
               {submitting ? (t.contact.submitting || 'Отправка...') : t.contact.submit}
             </button>
