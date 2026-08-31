@@ -384,7 +384,7 @@ export default function Home() {
                   description: t.demos.projects[0].description,
                   category: "Travel & Lifestyle",
                   image: "/travelai.webp",
-                  href: "https://travelai.top/",
+                  href: "https://zia.lambda19.org/",
                   tags: ["AI Recommendations", "Real-time Insights"]
                 },
                 {
